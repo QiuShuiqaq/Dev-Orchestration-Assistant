@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile Software Delivery"
+  short_description: "Autonomously deliver mobile software from approved spec to package and cleanup."
+  default_prompt: "Use $mobile-software-delivery to continue this approved mobile software spec through design, implementation, testing, packaging, and cleanup."

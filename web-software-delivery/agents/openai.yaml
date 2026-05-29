@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Software Delivery"
+  short_description: "Autonomously deliver web software from approved spec to build and cleanup."
+  default_prompt: "Use $web-software-delivery to continue this approved web software spec through design, implementation, testing, packaging, and cleanup."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dev Orchestration Assistant"
+  short_description: "Route approved software work into desktop, mobile, or web delivery chains."
+  default_prompt: "Use $dev-orchestration-assistant to classify this software project and route it to the correct delivery chain."

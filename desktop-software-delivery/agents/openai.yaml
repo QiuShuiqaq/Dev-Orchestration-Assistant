@@ -1,0 +1,4 @@
+interface:
+  display_name: "Desktop Software Delivery"
+  short_description: "Autonomously deliver desktop software from approved spec to package and cleanup."
+  default_prompt: "Use $desktop-software-delivery to continue this approved desktop software spec through design, implementation, testing, packaging, and cleanup."
