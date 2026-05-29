@@ -15,15 +15,38 @@ It is designed for a workflow where the spec is confirmed first, then Codex cont
 - packaging
 - garbage cleanup
 
+## Why This Exists
+
+Most software projects should not follow the same delivery workflow.
+
+- desktop software needs packaging, filesystem behavior, and OS integration thinking
+- mobile software needs capability boundaries, signing awareness, and release-channel thinking
+- web software needs browser verification, deployment thinking, and frontend integration discipline
+
+This bundle makes those delivery paths explicit instead of forcing one generic workflow onto every product.
+
 ## Included Skills
 
-This repository contains four skills:
+This repository contains five skills:
 
 1. `dev-orchestration-assistant`
 2. `development-workflow-router`
 3. `desktop-software-delivery`
 4. `mobile-software-delivery`
 5. `web-software-delivery`
+
+## Repository Layout
+
+```text
+Dev-Orchestration-Assistant/
+├── README.md
+├── LICENSE
+├── dev-orchestration-assistant/
+├── development-workflow-router/
+├── desktop-software-delivery/
+├── mobile-software-delivery/
+└── web-software-delivery/
+```
 
 ## What The Bundle Does
 
@@ -37,7 +60,56 @@ The workflow router skill adds Chinese command-based stage routing for broader e
 
 Each platform delivery skill then drives the project through the full delivery loop after spec approval.
 
-## Install
+## Delivery Chains
+
+### Desktop Chain
+
+Use when the product is:
+
+- a native desktop app
+- a cross-platform desktop app
+- a lightweight local tool
+
+The desktop chain is optimized for:
+
+- local filesystem behavior
+- tray or window integration
+- packaging as executable, installer, or bundle
+- post-build cleanup
+
+### Mobile Chain
+
+Use when the product is:
+
+- a native iOS or Android app
+- a cross-platform mobile app
+- a mini program
+- a device-specific mobile-adjacent app
+
+The mobile chain is optimized for:
+
+- platform capability boundaries
+- release artifact generation
+- simulator or device verification
+- packaging constraints such as signing and release channels
+
+### Web Chain
+
+Use when the product is:
+
+- a traditional web site
+- a SPA
+- a PWA
+- an embedded web page or WebView surface
+
+The web chain is optimized for:
+
+- browser-based verification
+- API integration boundaries
+- production build generation
+- frontend cleanup after delivery
+
+## Installation Steps
 
 Copy the included skill folders into your local Codex skills directory.
 
@@ -57,6 +129,12 @@ After copying, your skills directory should contain:
   mobile-software-delivery\
   web-software-delivery\
 ```
+
+Recommended follow-up:
+
+1. restart or refresh your Codex session if needed
+2. use Chinese workflow prefixes such as `桌面开发：`, `移动开发：`, `网页开发：`
+3. use stage router commands when you want narrower control such as `需求分析：` or `做新功能：`
 
 ## Recommended Usage
 
@@ -98,7 +176,41 @@ After copying, your skills directory should contain:
 做新功能：在当前项目里实现库存预警功能，按小步递进方式完成并在每步后验证。
 ```
 
+## Typical Use Cases
+
+- internal desktop tools
+- packaging-oriented local utilities
+- mobile product delivery with a confirmed spec
+- SaaS admin panels and online tools
+- teams that want Chinese command-based engineering stages
+
+## Autonomy Model
+
+After spec approval, the delivery skills are intended to continue through:
+
+1. design
+2. planning
+3. implementation
+4. testing
+5. packaging
+6. cleanup
+
+They should only pause when they hit real blockers such as:
+
+- signing certificates
+- store accounts
+- deployment secrets
+- production access
+- major unresolved architecture conflicts
+- cleanup requests outside the safe garbage scope
+
 ## Notes
 
 - The skill bundle assumes you already have supporting implementation skills available in your Codex environment, such as planning, implementation, testing, review, and cleanup skills.
 - Packaging still pauses when signing credentials, store accounts, or deployment secrets are required and unavailable.
+
+## Roadmap
+
+- add more examples for native desktop, Flutter, and SPA workflows
+- publish companion cleanup and review skill bundles as separate repositories
+- add a more polished command reference for public-facing documentation
