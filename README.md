@@ -20,9 +20,10 @@ It is designed for a workflow where the spec is confirmed first, then Codex cont
 This repository contains four skills:
 
 1. `dev-orchestration-assistant`
-2. `desktop-software-delivery`
-3. `mobile-software-delivery`
-4. `web-software-delivery`
+2. `development-workflow-router`
+3. `desktop-software-delivery`
+4. `mobile-software-delivery`
+5. `web-software-delivery`
 
 ## What The Bundle Does
 
@@ -31,6 +32,8 @@ The top-level orchestration skill routes software work by runtime surface and de
 - desktop requests go to the desktop delivery skill
 - mobile requests go to the mobile delivery skill
 - web requests go to the web delivery skill
+
+The workflow router skill adds Chinese command-based stage routing for broader engineering work.
 
 Each platform delivery skill then drives the project through the full delivery loop after spec approval.
 
@@ -49,6 +52,7 @@ After copying, your skills directory should contain:
 ```text
 .codex\skills\
   dev-orchestration-assistant\
+  development-workflow-router\
   desktop-software-delivery\
   mobile-software-delivery\
   web-software-delivery\
@@ -78,6 +82,20 @@ After copying, your skills directory should contain:
 
 ```text
 软件编排：我要做一个软件产品，请先判断应该走桌面、移动还是 Web 链路，再给出后续推进方式。
+```
+
+### Stage-based Chinese development commands
+
+```text
+需求分析：我要做一个中小商家库存管理系统，先帮我明确范围、约束、验收标准和非目标。
+```
+
+```text
+规划：基于现有 spec，把 MVP 拆成按顺序执行的任务，并标明每一步怎么验证。
+```
+
+```text
+做新功能：在当前项目里实现库存预警功能，按小步递进方式完成并在每步后验证。
 ```
 
 ## Notes

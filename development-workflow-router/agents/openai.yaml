@@ -1,0 +1,4 @@
+interface:
+  display_name: "Development Workflow Router"
+  short_description: "Route Chinese development commands into one clear engineering stage."
+  default_prompt: "Use $development-workflow-router to route this Chinese development command to the correct engineering stage."
